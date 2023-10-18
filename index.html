@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Laboratório de Experimentação Virtual</title>
+</head>
+<body>
+    <main>
+        <div class="laboratorio">
+            <div class="instrumentos">
+                <span class="instrumento-imagem"><img id="instrumentoImagem" src="" height="30px"></span>
+                <select id="instrumento" onchange="atualizarImagem('instrumentoImagem', 'instrumento')">
+                    <option value="Becker">Becker</option>
+                    <option value="Tubo de Ensaio">Tubo de Ensaio</option>
+                    <option value="Proveta">Proveta</option>
+                    <option value="Proveta">Funil</option>
+                </select>
+            </div>
+
+            <div class="substancias">
+                <span class="substancia-imagem"><img id="substanciaImagem" src="" height="30px"></span>
+                <select id="substancia" onchange="atualizarImagem('substanciaImagem', 'substancia')">
+                    <option value="Água">Água</option>
+                    <option value="Óleo">Óleo</option>
+                    <option value="Álcool">Álcool</option>
+                    <option value="Glicerina">Glicerina</option>
+                </select>   
+            </div>
+
+            <button onclick="adicionarSubstancia()">Adicionar Substância</button>
+        </div>
+
+        <div class="resultados">
+        <div id="resultado"></div>
+        </div>
+    </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
